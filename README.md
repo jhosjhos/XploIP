@@ -51,7 +51,11 @@ Esta función ingresa los datos en el script para conectarte de IP estática, cu
 Puedes usar la opción **1.- IPConfig** para verificar que el cambio de IP se realizo correctamente, si tuviste algun problema puedes volver intentarlo con la opcion **2.- Volver Intentar"**.
 
 ## Establecer DHCP
+Encontraras 2 opciones de cambio de DHCP. Ethernet/Wi-Fi es muy sencillo la función de esta herramienta, solamente quita la configuración de IP Static y la pone DHCP. Solamente escoge que adaptador de red es la que quieres cambiar.
 
 ## Readme
+Esta función te redijera al repositorio de GitHub, donde se ira actualizando como se vayan agregando funciones. 
 
 ## Changelog
+Te redijera al **log de cambios** donde se irán actualizando los cambios o funciones agregadas futuramente.
+#### Gracias por darte el tiempo de leer esto < 3
