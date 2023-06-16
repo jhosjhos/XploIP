@@ -6,9 +6,9 @@ COLOR 0A
 :menu
     cls
 echo.  
-echo.  
-echo. 
-echo.  
+echo.                                            Nota: Recuerda ejecutar este 
+echo.                                                  Script como ADMINISTRADOR
+echo.                                                  o NO funcionara.
 echo.   
 echo.      
 echo.   
@@ -24,21 +24,304 @@ echo.                   /$$/\  $l $$  l $l $l $$    $$l $$ l $$
 echo.                  l $$  \ $l $$$$$$$l $l  $$$$$$/$$$$$l $$                         
 echo.                  l__/  l__l $$____/l__/\______l______l__/                         
 echo.                           l $$                                                      
-echo.                           l $$                 1.- Ethernet                                    
-echo.                           l__/                 2.- Wi-Fi 
-echo.                                                3.- IP Static/DHCP Manual                              
-echo.                                                9.- salir            
+echo.                           l $$                 1.- Directorio Ethernet                                    
+echo.                           l__/                 2.- Directorio Wi-Fi 
+echo.                                                3.- IP Static Manual 
+echo.                                                4.- Establecer DHCP
+echo.
+echo.                                                  7.- readme
+echo.                                                  8.- changelog                             
+echo.                                                  9.- salir            
 echo.
 echo.
     set /P Opc=
  
     IF "%Opc%"    ==  "9"  goto :EOF
-    IF "%Opc%"    ==  "readme"  goto red
+    IF "%Opc%"    ==  "8"  goto change
+    IF "%Opc%"    ==  "7"  goto readme
+    IF "%Opc%"    ==  "4"  goto establecer
     IF "%Opc%"    ==  "3"  goto manual
     IF "%Opc%"    ==  "2"  goto M_Wi
     IF "%Opc%"    ==  "1"  goto M_Eth
                            goto:menu
 
+::--------Directorio Ethernet-----------
+:M_Eth
+    cls
+echo.   
+echo.   
+echo.    /$$   /$$         /$$        /$$$$$$/$$$$$$$ 
+echo.   l $$  / $$        l $$       l_  $$_l $$__  $$
+echo.   l  $$/ $$/ /$$$$$$l $$ /$$$$$$ l $$ l $$  \ $$
+echo.    \  $$$$/ /$$__  $l $$/$$__  $$l $$ l $$$$$$$/ 
+echo.    l $$ $$   $$  \ $l $l $$  \ $$l $$ l $$____/                    
+echo.    /$$/\  $l $$  l $l $l $$    $$l $$ l $$                         
+echo.   l $$  \ $l $$$$$$$l $l  $$$$$$/$$$$$l $$                         
+echo.   l__/  l__l $$____/l__/\______l______l__/                         
+echo.            l $$                                                      
+echo.            l $$                                                     
+echo.            l__/                                              
+echo.                                                           
+echo.                                  Usuarios Ethernet    
+echo.                                  
+echo.                                  
+echo.                                            1.- Usuario Uno
+echo.                                            2.- Usuario Dos
+echo.                                            3.- Usuario Tres
+echo.                                            4.- Usuario Cuatro
+echo.                                            5.- Usuario Cinco
+echo.                                            6.- Restablecer Predeterminada
+echo.
+echo.                                            8.- atras
+echo.                                            9.- salir
+echo.
+echo.     
+echo.     
+echo.
+    set /P Opc=
+ 
+    IF "%Opc%"    ==  "9"  goto :EOF
+    IF "%Opc%"    ==  "8"  goto :menu
+    IF "%Opc%"    ==  "6"  goto e_res
+    IF "%Opc%"    ==  "5"  goto e_cinco
+    IF "%Opc%"    ==  "4"  goto e_cuatro
+    IF "%Opc%"    ==  "3"  goto e_tres
+    IF "%Opc%"    ==  "2"  goto e_dos
+    IF "%Opc%"    ==  "1"  goto e_uno
+                           goto:M_Eth
+::----------Variables ETHERNET-------------  
+::----Usuario uno-----  
+:e_uno
+@echo off
+cls
+netsh interface ipv4 set address name="Ethernet" source=static address=172.16.6.44 mask=255.255.255.0 gateway=172.16.6.254
+netsh interface ipv4 add dnsserver name="Ethernet" address=172.30.1.21 index=1
+netsh interface ipv4 add dnsserver name="Ethernet" address=172.28.1.20 index=2
+ipconfig
+echo.
+echo.
+echo. Listo :)
+echo.
+echo.
+pause
+goto :menu
+::------Usuario dos-----
+:e_dos
+@echo off
+cls
+netsh interface ipv4 set address name="Ethernet" source=static address=172.16.6.44 mask=255.255.255.0 gateway=172.16.6.254
+netsh interface ipv4 add dnsserver name="Ethernet" address=172.30.1.21 index=1
+netsh interface ipv4 add dnsserver name="Ethernet" address=172.28.1.20 index=2
+ipconfig
+echo.
+echo.
+echo. Listo :)
+echo.
+echo.
+pause
+goto :menu
+::----Usuario tres------
+:e_tres
+@echo off
+cls
+netsh interface ipv4 set address name="Ethernet" source=static address=172.16.6.44 mask=255.255.255.0 gateway=172.16.6.254
+netsh interface ipv4 add dnsserver name="Ethernet" address=172.30.1.21 index=1
+netsh interface ipv4 add dnsserver name="Ethernet" address=172.28.1.20 index=2
+ipconfig
+echo.
+echo.
+echo. Listo :)
+echo.
+echo.
+pause
+goto :menu
+::-----Usuario cuatro-------
+:e_cuatro
+@echo off
+cls
+netsh interface ipv4 set address name="Ethernet" source=static address=172.16.6.44 mask=255.255.255.0 gateway=172.16.6.254
+netsh interface ipv4 add dnsserver name="Ethernet" address=172.30.1.21 index=1
+netsh interface ipv4 add dnsserver name="Ethernet" address=172.28.1.20 index=2
+ipconfig
+echo.
+echo.
+echo. Listo :)
+echo.
+echo.
+pause
+goto :menu
+::-----Usuario cinco------
+:e_cinco
+@echo off
+cls
+netsh interface ipv4 set address name="Ethernet" source=static address=172.16.6.44 mask=255.255.255.0 gateway=172.16.6.254
+netsh interface ipv4 add dnsserver name="Ethernet" address=172.30.1.21 index=1
+netsh interface ipv4 add dnsserver name="Ethernet" address=172.28.1.20 index=2
+ipconfig
+echo.
+echo.
+echo. Listo :)
+echo.
+echo.
+pause
+goto :menu
+::----Restablecer Predeterminada--------
+:e_res
+@echo off
+cls
+netsh int ip set address name="Ethernet" source=dhcp
+netsh interface ipv4 set dnsserver name="Ethernet" source=dhcp
+::netsh int ip show config
+ipconfig
+echo.
+echo.
+echo. Listo :)
+echo.
+echo.
+pause
+goto :menu
+
+::------------------------------------------------------------------------------------------- 
+
+::--------Menu WI-FI-----------
+:M_Wi
+    cls
+echo.   
+echo.   
+echo.    /$$   /$$         /$$        /$$$$$$/$$$$$$$ 
+echo.   l $$  / $$        l $$       l_  $$_l $$__  $$
+echo.   l  $$/ $$/ /$$$$$$l $$ /$$$$$$ l $$ l $$  \ $$
+echo.    \  $$$$/ /$$__  $l $$/$$__  $$l $$ l $$$$$$$/ 
+echo.    l $$ $$   $$  \ $l $l $$  \ $$l $$ l $$____/                    
+echo.    /$$/\  $l $$  l $l $l $$    $$l $$ l $$                         
+echo.   l $$  \ $l $$$$$$$l $l  $$$$$$/$$$$$l $$                         
+echo.   l__/  l__l $$____/l__/\______l______l__/                         
+echo.            l $$                                                      
+echo.            l $$                                                     
+echo.            l__/                                              
+echo.                                                           
+echo.                                  Usuarios Wi-Fi    
+echo.                                  
+echo.                                  
+echo.                                            1.- Usuario Uno
+echo.                                            2.- Usuario Dos
+echo.                                            3.- Usuario Tres
+echo.                                            4.- Usuario Cuatro
+echo.                                            5.- Usuario Cinco
+echo.                                            6.- Restablecer Predeterminada
+echo.
+echo.                                            8.- atras
+echo.                                            9.- salir
+echo.
+echo.     
+echo.     
+echo.
+    set /P Opc=
+ 
+    IF "%Opc%"    ==  "9"  goto :EOF
+    IF "%Opc%"    ==  "8"  goto :menu
+    IF "%Opc%"    ==  "6"  goto w_res
+    IF "%Opc%"    ==  "5"  goto w_cinco
+    IF "%Opc%"    ==  "4"  goto w_cuatro
+    IF "%Opc%"    ==  "3"  goto w_tres
+    IF "%Opc%"    ==  "2"  goto w_dos
+    IF "%Opc%"    ==  "1"  goto w_uno
+                           goto:M_Wi
+::-------------------------------
+
+::----------Variables Wi-Fi---------------------------
+::----Usuario uno-----  
+:w_uno
+@echo off
+cls
+netsh interface ipv4 set address name="Wi-Fi" source=static address=172.16.8.52 mask=255.255.255.0 gateway=172.16.8.254
+netsh interface ipv4 add dnsserver name="Wi-Fi" address=172.30.1.21 index=1
+netsh interface ipv4 add dnsserver name="Wi-Fi" address=172.28.1.20 index=2
+ipconfig
+echo.
+echo.
+echo. Listo :)
+echo.
+echo.
+pause
+goto :menu
+::------Usuario dos-----
+:w_dos
+@echo off
+cls
+netsh interface ipv4 set address name="Wi-Fi" source=static address=172.16.8.50 mask=255.255.255.0 gateway=172.16.8.254
+netsh interface ipv4 add dnsserver name="Wi-Fi" address=172.30.1.21 index=1
+netsh interface ipv4 add dnsserver name="Wi-Fi" address=172.28.1.20 index=2
+ipconfig
+echo.
+echo.
+echo. Listo :)
+echo.
+echo.
+pause
+goto :menu
+::----Usuario tres------
+:w_tres
+@echo off
+cls
+netsh interface ipv4 set address name="Wi-Fi" source=static address=172.16.8.42 mask=255.255.255.0 gateway=172.16.8.254
+netsh interface ipv4 add dnsserver name="Wi-Fi" address=172.30.1.21 index=1
+netsh interface ipv4 add dnsserver name="Wi-Fi" address=172.28.1.20 index=2
+ipconfig
+echo.
+echo.
+echo. Listo :)
+echo.
+echo.
+pause
+goto :menu
+::-----Usuario cuatro-------
+:w_cuatro
+@echo off
+cls
+netsh interface ipv4 set address name="Wi-Fi" source=static address=172.16.8.124 mask=255.255.255.0 gateway=172.16.8.254
+netsh interface ipv4 add dnsserver name="Wi-Fi" address=172.30.1.21 index=1
+netsh interface ipv4 add dnsserver name="Wi-Fi" address=172.28.1.20 index=2
+ipconfig
+echo.
+echo.
+echo. Listo :)
+echo.
+echo.
+pause
+goto :menu
+::-----Usuario cinco------
+:w_cinco
+@echo off
+cls
+netsh interface ipv4 set address name="Wi-Fi" source=static address=172.16.8.123 mask=255.255.255.0 gateway=172.16.8.254
+netsh interface ipv4 add dnsserver name="Wi-Fi" address=172.30.1.21 index=1
+netsh interface ipv4 add dnsserver name="Wi-Fi" address=172.28.1.20 index=2
+ipconfig
+echo.
+echo.
+echo. Listo :)
+echo.
+echo.
+pause
+goto :menu
+::----Restablecer Predeterminada--------
+:w_res
+@echo off
+cls
+netsh int ip set address name="Wi-Fi" source=dhcp
+netsh interface ipv4 set dnsserver name="Wi-Fi" source=dhcp
+::netsh int ip show config
+ipconfig
+echo.
+echo.
+echo. Listo :)
+echo.
+echo.
+pause
+goto :menu
+
+::-------------------------------------------------------------------------------------------
 ::--------IP Static/DHCP Manual---------------
 :manual
 cls
@@ -159,9 +442,10 @@ cls
  echo.
  pause 
  goto :menu
+::--------------------------------------------------------------
 
-::--------Menu Ethernet-----------
-:M_Eth
+::--------------Restablecer Predeterminada----------------------
+:establecer
     cls
 echo.   
 echo.   
@@ -177,33 +461,30 @@ echo.            l $$
 echo.            l $$                                                     
 echo.            l__/                                              
 echo.                                                           
-echo.                                  Usuarios Ethernet    
+echo.                                  Establecer DHCP
 echo.                                  
 echo.                                  
-echo.                                            1.- MV
-echo.                                            2.- Rest
+echo.                                            1.- DHCP Ethernet
+echo.                                            2.- DHCP Wi-Fi
 echo. 
 echo.                                            8.- atras
-echo.                                            9.- salir
 echo.
-echo.     
-echo.     
 echo.
     set /P Opc=
  
-    IF "%Opc%"    ==  "9"  goto :EOF
     IF "%Opc%"    ==  "8"  goto :menu
-    IF "%Opc%"    ==  "2"  goto res
-    IF "%Opc%"    ==  "1"  goto mv
-                           goto:M_Eth
-::----------Variables ETHERNET-------------   
-::---MV-----                   
-:mv
+    IF "%Opc%"    ==  "2"  goto ee
+    IF "%Opc%"    ==  "1"  goto ew
+                           goto:restablecer
+
+::----Variables restablecer--------------
+::--------------------------------------------------------------
+:ew
 @echo off
 cls
-netsh interface ipv4 set address name="Ethernet" source=static address=172.16.6.44 mask=255.255.255.0 gateway=172.16.6.254
-netsh interface ipv4 add dnsserver name="Ethernet" address=172.30.1.21 index=1
-netsh interface ipv4 add dnsserver name="Ethernet" address=172.28.1.20 index=2
+netsh int ip set address name="Wi-Fi" source=dhcp
+netsh interface ipv4 set dnsserver name="Wi-Fi" source=dhcp
+::netsh int ip show config
 ipconfig
 echo.
 echo.
@@ -212,8 +493,8 @@ echo.
 echo.
 pause
 goto :menu
-::----REST---
-:res
+::--------------------------------------------------------------
+:ee
 @echo off
 cls
 netsh int ip set address name="Ethernet" source=dhcp
@@ -230,184 +511,17 @@ goto :menu
 ::--------------------------------------------------------------
 
 
-::--------Menu WI-FI-----------
-:M_Wi
-    cls
-echo.   
-echo.   
-echo.    /$$   /$$         /$$        /$$$$$$/$$$$$$$ 
-echo.   l $$  / $$        l $$       l_  $$_l $$__  $$
-echo.   l  $$/ $$/ /$$$$$$l $$ /$$$$$$ l $$ l $$  \ $$
-echo.    \  $$$$/ /$$__  $l $$/$$__  $$l $$ l $$$$$$$/ 
-echo.    l $$ $$   $$  \ $l $l $$  \ $$l $$ l $$____/                    
-echo.    /$$/\  $l $$  l $l $l $$    $$l $$ l $$                         
-echo.   l $$  \ $l $$$$$$$l $l  $$$$$$/$$$$$l $$                         
-echo.   l__/  l__l $$____/l__/\______l______l__/                         
-echo.            l $$                                                      
-echo.            l $$                                                     
-echo.            l__/                                              
-echo.                                                           
-echo.                                  Usuarios Wi-Fi    
-echo.                                  
-echo.                                  
-echo.                                            1.- MM
-echo.                                            2.- SE
-echo.                                            3.- RL
-echo.                                            4.- LI
-echo.                                            5.- GB
-echo.                                            6.- Rest
-echo.
-echo.                                            8.- atras
-echo.                                            9.- salir
-echo.
-echo.     
-echo.     
-echo.
-    set /P Opc=
- 
-    IF "%Opc%"    ==  "9"  goto :EOF
-    IF "%Opc%"    ==  "8"  goto :menu
-    IF "%Opc%"    ==  "6"  goto res_w
-    IF "%Opc%"    ==  "5"  goto gb
-    IF "%Opc%"    ==  "4"  goto li
-    IF "%Opc%"    ==  "3"  goto rl
-    IF "%Opc%"    ==  "2"  goto se
-    IF "%Opc%"    ==  "1"  goto mm
-                           goto:M_Wi
-::-------------------------------
 
-::----------Variables Wi-Fi---------------------------
-::----Moni-----  
-:mm
-@echo off
-cls
-netsh interface ipv4 set address name="Wi-Fi" source=static address=172.16.8.52 mask=255.255.255.0 gateway=172.16.8.254
-netsh interface ipv4 add dnsserver name="Wi-Fi" address=172.30.1.21 index=1
-netsh interface ipv4 add dnsserver name="Wi-Fi" address=172.28.1.20 index=2
-ipconfig
-echo.
-echo.
-echo. Listo :)
-echo.
-echo.
-pause
-goto :menu
-::------Serg-----
-:se
-@echo off
-cls
-netsh interface ipv4 set address name="Wi-Fi" source=static address=172.16.8.50 mask=255.255.255.0 gateway=172.16.8.254
-netsh interface ipv4 add dnsserver name="Wi-Fi" address=172.30.1.21 index=1
-netsh interface ipv4 add dnsserver name="Wi-Fi" address=172.28.1.20 index=2
-ipconfig
-echo.
-echo.
-echo. Listo :)
-echo.
-echo.
-pause
-goto :menu
-::----Linda------
-:rl
-@echo off
-cls
-netsh interface ipv4 set address name="Wi-Fi" source=static address=172.16.8.42 mask=255.255.255.0 gateway=172.16.8.254
-netsh interface ipv4 add dnsserver name="Wi-Fi" address=172.30.1.21 index=1
-netsh interface ipv4 add dnsserver name="Wi-Fi" address=172.28.1.20 index=2
-ipconfig
-echo.
-echo.
-echo. Listo :)
-echo.
-echo.
-pause
-goto :menu
-::-----lili-------
-:li
-@echo off
-cls
-netsh interface ipv4 set address name="Wi-Fi" source=static address=172.16.8.124 mask=255.255.255.0 gateway=172.16.8.254
-netsh interface ipv4 add dnsserver name="Wi-Fi" address=172.30.1.21 index=1
-netsh interface ipv4 add dnsserver name="Wi-Fi" address=172.28.1.20 index=2
-ipconfig
-echo.
-echo.
-echo. Listo :)
-echo.
-echo.
-pause
-goto :menu
-::-----gabo------
-:gb
-@echo off
-cls
-netsh interface ipv4 set address name="Wi-Fi" source=static address=172.16.8.123 mask=255.255.255.0 gateway=172.16.8.254
-netsh interface ipv4 add dnsserver name="Wi-Fi" address=172.30.1.21 index=1
-netsh interface ipv4 add dnsserver name="Wi-Fi" address=172.28.1.20 index=2
-ipconfig
-echo.
-echo.
-echo. Listo :)
-echo.
-echo.
-pause
-goto :menu
-::----REST---
-:res_w
-@echo off
-cls
-netsh int ip set address name="Wi-Fi" source=dhcp
-netsh interface ipv4 set dnsserver name="Wi-Fi" source=dhcp
-::netsh int ip show config
-ipconfig
-echo.
-echo.
-echo. Listo :)
-echo.
-echo.
-pause
-goto :menu
-::------------------------------------------------------------------
 
-::----------README-------------------------
-:red
+
+
+::----------README----------------------------
+:readme
 @echo off
-::mode con cols=95 lines=50
-cls
-echo.
-echo.**********************************************************************************************
-echo.*                                                                                            *
-echo.*   __/\\\________/\\\__/\\\________/\\\__/\\\_______/\\\_____/\\\\\\\\\\\___                *
-echo.*    _\///\\\____/\\\/__\/\\\_______\/\\\_\///\\\___/\\\/____/\\\/////////\\\_               *
-echo.*     ___\///\\\/\\\/____\/\\\_______\/\\\___\///\\\\\\/_____\//\\\______\///__              *
-echo.*      _____\///\\\/______\/\\\\\\\\\\\\\\\_____\//\\\\________\////\\\_________             *
-echo.*       _______\/\\\_______\/\\\/////////\\\______\/\\\\___________\////\\\______            *
-echo.*        _______\/\\\_______\/\\\_______\/\\\______/\\\\\\_____________\////\\\___           *
-echo.*         _______\/\\\_______\/\\\_______\/\\\____/\\\////\\\____/\\\______\//\\\__          *
-echo.*          _______\/\\\_______\/\\\_______\/\\\__/\\\/___\///\\\_\///\\\\\\\\\\\/___         *
-echo.*           _______\///________\///________\///__\///_______\///____\///////////_____        *
-echo.*                                                                                            *
-echo.*                      SCRIPT PARA CAMBIO DE IPS estatica y DHCP                             *
-echo.*                                                                                            *
-echo.*              *Versiones*                                                                   *
-echo.*                                                                                            *
-echo.*           +Update 1.0                                                                      *
-echo.*            27-04-2023 - Actualizado hasta Tpz 1 (Faltante TPZ 2)                           *
-echo.*                       - Implementado Rest (Lo deja DHCP)                                   *
-echo.*                       - Navegacion funcionale (regreso y salida)                           *
-echo.*                                                                                            *
-echo.*           +Update 1.1                                                                      *
-echo.*            28-04-2023  - Mejora en la interface                                            *
-echo.*                        - Formulario IP Statica Manual cualquier red                        *
-echo.*                                                                                            *
-echo.*               *Feedback*                                                                   *
-echo.*                    -Recopilar los datos ethernet de TPZ 1 y 2                              *
-echo.*                    -Crear una recopilacion de los usuarios de todas las sucursales         *
-echo.*                    -Reparar el bug de escoge el segundo menu la primera opcion que hayas   *
-echo.*                       elegido primero.                                                     *
-echo.*                    -Corregir el error de formulario (No se puede corregir cuando ingresas  *
-echo.*                       datos, y borra todo)                                                 *
-echo.*                                                                                            *
-echo.**********************************************************************************************
-pause
+start https://github.com/jhosjhos/XploIP/tree/viewer#readme
+goto :menu
+::----------CHANGELOG-------------------------
+:change
+@echo off
+start https://github.com/jhosjhos/XploIP/blob/viewer/changelog
 goto :menu
