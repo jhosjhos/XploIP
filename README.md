@@ -1,6 +1,11 @@
 # Readme
 Este programa se creó con el fin de tener un directorio de IP´s disponibles en un clic, poder generar un cambio o restablecer las redes que tenías anteriormente, el sustituir tus direcciones sin tener la complicación de entrar a las herramientas de Windows y cambiar cada una manual.  Me encuentro muy feliz por el resultado y espero si tu utilizas esta herramienta también lo agradezcas :) 
 
+## Caso de Uso
+Este script fue desarrollo para el entorno de **Soporte TI** 
+- Es muy común en el rol cambiar de IP para poder **realizar pruebas o configurar red de usuarios finales.**
+-  Su uso puede ser en un entorno de **trabajo o personal**, si usas el mismo dispositivo de trabajo y personal, una forma práctica y rápida para cambiar de dirección sin entrar a la configuración de Windows.
+
 ## ¿Como se utiliza?
 Es muy sencillo de utilizar ya que tiene una interfaz directa. En el menú su encuentran las opciones disponibles para su funcionamiento.
 >IMPORTANTE!!
@@ -58,4 +63,7 @@ Esta función te redijera al repositorio de GitHub, donde se ira actualizando co
 
 ## Changelog
 Te redijera al **log de cambios** donde se irán actualizando los cambios o funciones agregadas futuramente.
-#### Gracias por darte el tiempo de leer esto < 3
+
+## Acerca de
+>Este Sctipt fue creado por **YHXS**/*JhosJhos*.
+Gracias por darte el tiempo de leer esto < 3
