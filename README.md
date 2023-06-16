@@ -3,6 +3,8 @@ Este programa se creó con el fin de tener un directorio de IP´s disponibles en
 
 ## ¿Como se utiliza?
 Es muy sencillo de utilizar ya que tiene una interfaz directa. En el menú su encuentran las opciones disponibles para su funcionamiento.
+>IMPORTANTE!!
+>Recuerda **EJECUTAR** el script **como ADMINISTRADOR o NO funcionara.**
 
 ### 1.-Directorio Ethernet y 2.-Directorio WI-FI
 Esta función es el **Directorio** de nuestras direcciones que vamos a llenar con las requisiciones que requiramos. 
@@ -13,13 +15,13 @@ Esta función es el **Directorio** de nuestras direcciones que vamos a llenar co
 
 Desgraciadamente aun **NO puede** implementar **llenar el directorio desde el script**, así que **tendremos que hacerlo manualmente**, si no lo entiendes **te explico aquí** como:
 
-#### Agregar IP al Directorio Wi-Fi
+#### Agregar Direcciones al Directorio Wi-Fi y Ethernet
 
 1. Abrimos nuestro **IDE** o **Editor de Texto** favorito.
 2. Abrimos el archivo **"XploIP"** para poder editarlo.
-3. Nos dirigiremos al **comentario** **Variables Wi-Fi** *(Aproximadamente está en la línea 280)*
-4. Cada dirección se encuentra dividida por un comentario como **"::---Usuario uno---"** solamente vamos a cambiar los *siguientes parámetros en el siguiente comando:* **"interface ipv4 set address"**
-5. **"name"** Este es el nombre que tiene tu adaptador de red Wi-Fi.  (Predeterminado es: **name="Wi-Fi")**
+3. Nos dirigiremos al **comentario** **Variables Wi-Fi** *(Aproximadamente está en la línea 280)* y **Variables ETHERNET** *(Aproximadamente está en la línea 200)*.
+4. Cada dirección se encuentra dividida por un comentario como **"::---Usuario uno---"** solamente vamos a cambiar los *siguientes parámetros en el siguiente comando:* **"interface ipv4 set address"** 
+5. **"name"** Este es el nombre que tiene tu adaptador de red Wi-Fi o Ethernet.  (Predeterminado es: **name="Wi-Fi"** y **name="Ethernet"**).
 6. **"address"** Esta es la direccion IP que vas a colocar con este usuario.
 7. **"mask"** Aquí colocaras la máscara que tiene tu red.
 8. **"gateway"** Recuerda que es la **puerta de enlace predeterminada**, asi que en esta parte la colocas.
@@ -30,4 +32,26 @@ Desgraciadamente aun **NO puede** implementar **llenar el directorio desde el sc
 11. Vamos a **"name"** *retomando el **punto 5** con el llenado de esta*.
 12. **"address"** aquí **pondremos** la **dirección** de los **DNS** que tenemos configurados en la red.
 13. **"index"** Es el **numero** de la **DNS** que estamos colocando. *(Como tenemos solamente 2 DNS, Por esa razón tenemos **"index=1 & index=2"**)*. Colocamos en la **"index=1** nuestra **primera dirección DNS**. y colocamos nuevamente en la **"index=2** nuestra **segunda dirección DNS**.
-14. Guardamos y es todo. **¡NOTA!** *Tendras que repetir esto con cada una de las direcciones que quieras registrar*.
+14. Guardamos y es todo. **¡NOTA!** *Tendrás que repetir esto con cada una de las direcciones que quieras registrar*.
+
+### Posibles Problemas 
+Es posible que tenga algunos bugs el script que estan en procesos de ser resultos, estos se tienen en registro en el [ChangeLog](https://github.com/jhosjhos/XploIP/blob/viewer/changelog).
+
+## IP Static Manual
+Esta función ingresa los datos en el script para conectarte de IP estática, cuenta con una interfaz un poco confusa. Los datos requeridos son como el **siguiente ejemplo**:
+- **Nombre de Red:** Ethernet
+- **Dirección IP:** 192.168.1.1
+- **Mascara:** 255.255.255.0
+- **Dirección Predeterminada:** 192.168.1.0
+- **Primer DNS:** 8.8.8.8
+- **Segundo DNS:** 8.8.4.4
+
+>Si te arroja errores de **"Parámetro no valido"**. Se debe a que estas colocando mal las direcciones, **verifica** tus **" . "** y el **nombre** de tu **adaptador de red.**
+
+Puedes usar la opción **1.- IPConfig** para verificar que el cambio de IP se realizo correctamente, si tuviste algun problema puedes volver intentarlo con la opcion **2.- Volver Intentar"**.
+
+## Establecer DHCP
+
+## Readme
+
+## Changelog
