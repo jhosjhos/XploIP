@@ -1,0 +1,35 @@
+**********************************************************************************************
+*                                                                                            *
+*   __/\\\________/\\\__/\\\________/\\\__/\\\_______/\\\_____/\\\\\\\\\\\___                *
+*    _\///\\\____/\\\/__\/\\\_______\/\\\_\///\\\___/\\\/____/\\\/////////\\\_               *
+*     ___\///\\\/\\\/____\/\\\_______\/\\\___\///\\\\\\/_____\//\\\______\///__              *
+*      _____\///\\\/______\/\\\\\\\\\\\\\\\_____\//\\\\________\////\\\_________             *
+*       _______\/\\\_______\/\\\/////////\\\______\/\\\\___________\////\\\______            *
+*        _______\/\\\_______\/\\\_______\/\\\______/\\\\\\_____________\////\\\___           *
+*         _______\/\\\_______\/\\\_______\/\\\____/\\\////\\\____/\\\______\//\\\__          *
+*          _______\/\\\_______\/\\\_______\/\\\__/\\\/___\///\\\_\///\\\\\\\\\\\/___         *
+*           _______\///________\///________\///__\///_______\///____\///////////_____        *
+*                                                                                            *
+*                      SCRIPT PARA CAMBIO DE IPS estatica y DHCP                             *
+*                                                                                            *
+*              *Versiones*                                                                   *
+*                                                                                            *
+*           +Update 1.0                                                                      *
+*            27-04-2023 - Actualizado hasta Tpz 1 (Faltante TPZ 2)                           *
+*                       - Implementado Rest (Lo deja DHCP)                                   *
+*                       - Navegacion funcionale (regreso y salida)                           *
+*                                                                                            *
+*           +Update 1.1                                                                      *
+*            28-04-2023  - Mejora en la interface                                            *
+*                        - Formulario IP Statica Manual cualquier red                        *
+*                                                                                            *
+*               *Feedback*                                                                   *
+*                    -Recopilar los datos ethernet de TPZ 1 y 2                              *
+*                    -Crear una recopilacion de los usuarios de todas las sucursales         *
+*                    -Reparar el bug de escoge el segundo menu la primera opcion que hayas   *
+*                       elegido primero.                                                     *
+*                    -Corregir el error de formulario (No se puede corregir cuando ingresas  *
+*                       datos, y borra todo)                                                 *
+*                                                                                            *
+*                                                                                            *
+**********************************************************************************************
