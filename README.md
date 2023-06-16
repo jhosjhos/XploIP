@@ -66,4 +66,4 @@ Te redijera al **log de cambios** donde se irán actualizando los cambios o func
 
 ## Acerca de
 >Este Sctipt fue creado por **YHXS**/*JhosJhos*.
-Gracias por darte el tiempo de leer esto < 3
+Gracias por darte el tiempo de leer esto y probarlo < 3
