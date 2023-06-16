@@ -23,9 +23,16 @@
 *            28-04-2023  - Mejora en la interface                                            *
 *                        - Formulario IP Statica Manual cualquier red                        *
 *                                                                                            *
-*               *Feedback*                                                                   *
-*                    -Recopilar los datos ethernet de TPZ 1 y 2                              *
-*                    -Crear una recopilacion de los usuarios de todas las sucursales         *
+*           +Update 1.2                                                                      *
+*            15-06-2023  - Se agrego la funcion de restablecer a predeterminada              *
+*                           desde el menu                                                    *
+*                        - Se quitaron los directorios de IPS registradas y se deja          *
+*                           limpio para uso nuevo                                            *
+*                        - se agrega la documentacion de "Readme y Changelog"                *
+*                        -Se agrega el manual de uso y soluciones                            *
+*                                                                                            *
+*                                                                                            *
+*                           Feedback*                                                        *
 *                    -Reparar el bug de escoge el segundo menu la primera opcion que hayas   *
 *                       elegido primero.                                                     *
 *                    -Corregir el error de formulario (No se puede corregir cuando ingresas  *
